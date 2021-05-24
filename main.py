@@ -26,7 +26,8 @@ def send(text):
 	
 
 def getservers():
-	url= os.environ["SCKEY2"]
+	url= os.environ["SCKEY2"][0]
+	
 	
 
 	
