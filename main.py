@@ -9,13 +9,13 @@ import os
 import base64
 
 def send(text):
-	id = os.environ.get("key3")
+	id = os.environ.get("SCKEY3")
 	data = {"chat_id": id,"text": text}
 	print(data)
 
 
 	headers = {'Content-Type': 'application/json'}
-	url= os.environ.get("key1")
+	url= os.environ.get("SCKEY1")
 	print(url)
 	jsons=json.dumps(data)
 	print(jsons)
@@ -26,7 +26,7 @@ def send(text):
 	
 
 def getservers():
-	url= os.environ.get("key2")
+	url= os.environ.get("SCKEY2")
 	print(url)
 	
 	
