@@ -24,4 +24,4 @@ jobs:
           SCKEY1: ${{ secrets.SCKEY1}}
           SCKEY2: ${{ secrets.SCKEY2}}
           SCKEY3: ${{ secrets.SCKEY3}}
-        run: echo "$SCKEY1"
+        run: echo $SCKEY1
