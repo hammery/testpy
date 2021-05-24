@@ -26,8 +26,8 @@ def send(text):
 	
 
 def getservers():
-	# url= os.environ["SCKEY2"]
-	url="http://185.193.37.220:5235"
+	url= os.environ["SCKEY2"]
+
 
 	
 	headers = {'Content-Type': 'text/plain; charset=utf-8',
