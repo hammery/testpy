@@ -1,4 +1,4 @@
-name: 'Baidu Tieba Auto Sign'
+name: 'testpy'
 
 on:
   push:
@@ -20,6 +20,6 @@ jobs:
       - name: 'Install dependencies'
         run: python -m pip install --upgrade requests
       - name: 'Start Sign'
-        env:
-          BDUSS: ${{ secrets.BDUSS }}
+    
+        
         run: python main.py
