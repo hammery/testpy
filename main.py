@@ -15,7 +15,7 @@ def send(text):
 
 
 	headers = {'Content-Type': 'application/json'}
-	url= os.environ.("SCKEY1")
+	url= os.environ.get("SCKEY1")
 	print(url)
 	jsons=json.dumps(data)
 	print(jsons)
