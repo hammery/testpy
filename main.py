@@ -1,4 +1,5 @@
 
+
 import requests
 import json
 import time
@@ -9,27 +10,31 @@ import os
 import base64
 
 def send(text):
-	id = os.environ.get("SCKEY3")
-	data = {"chat_id": id,"text": text}
+
+	id=os.environ["SCKEY3"]
+	data = {
+	   "chat_id": id,         # 对话id。若是频道则为“@channel_id”
+	  "text": text
+	      # 消息的解析模式
+	}
 	print(data)
 
-
+	## headers中添加上content-type这个参数，指定为json格式
 	headers = {'Content-Type': 'application/json'}
-	url= os.environ.get("SCKEY1")
+
+
+	url= os.environ["SCKEY1"]
 	print(url)
 	jsons=json.dumps(data)
 	print(jsons)
 
-	
+	## post的时候，将data字典形式的参数用json包转换成json格式。
 	r = requests.post(url=url, headers=headers, data=jsons)
 	print(r.text)
-	
+	# print(data)
 
 def getservers():
-	url= os.environ.get("SCKEY2")
-	print(url)
-	
-	
+	url= os.environ["SCKEY2"]
 
 	
 	headers = {'Content-Type': 'text/plain; charset=utf-8',
@@ -39,16 +44,14 @@ def getservers():
 	r = requests.get(url=url, headers=headers)
 	
 	t=base64.b64decode(r.text).decode("utf-8")
-	print(r.text)
-
+	# print(t.split('\n'))
 	sends=t.split('\n') 
 	for j in range(1,len(sends)):
 		print(sends[j])
-		# send(sends[j])
+		send(sends[j])
 
 
 
 if __name__ == '__main__':
 
 	getservers()
-
