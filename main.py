@@ -34,7 +34,7 @@ def send(text):
 	# print(data)
 
 def getservers():
-	url= os.environ["SCKEY6"]
+	url= os.environ["SCKEY2"]
 	print(url)
 
 	
