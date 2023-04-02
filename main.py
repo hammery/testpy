@@ -35,6 +35,7 @@ def send(text):
 
 def getservers():
 	url= os.environ["SCKEY6"]
+	print(url)
 
 	
 	headers = {'Content-Type': 'text/plain; charset=utf-8',
