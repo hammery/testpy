@@ -25,4 +25,5 @@ jobs:
           SCKEY2: ${{ secrets.SCKEY2}}
           SCKEY3: ${{ secrets.SCKEY3}}
           SCKEY4: ${{ secrets.SCKEY4}}
+          SCKEY5: ${{ secrets.SCKEY5}}
         run: python3 main.py
